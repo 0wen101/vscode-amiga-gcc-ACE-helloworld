@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "amiga-assembly",
+            "request": "launch",
+            "name": "Run",
+            "stopOnEntry": true, //get vasm or something if true
+            "program": "${workspaceFolder}/uae/DH0/hello",
+            "remoteProgram": "SYS:hello",
+            "emulatorType": "winuae",
+            "emulatorArgs": [
+                "-s",
+                 "filesystem=rw,dh0:${workspaceFolder}/uae/DH0",
+                "-s",
+                "bsdsocket_emu=true",
+              
+            ],
+            //"preLaunchTask": "Build"
+        }
+    ]
+}
