@@ -8,7 +8,7 @@
             "type": "amiga-assembly",
             "request": "launch",
             "name": "Run",
-            "stopOnEntry": true, //get vasm or something if true
+            "stopOnEntry": true,
             "program": "${workspaceFolder}/uae/DH0/hello",
             "remoteProgram": "SYS:hello",
             "emulatorType": "winuae",
