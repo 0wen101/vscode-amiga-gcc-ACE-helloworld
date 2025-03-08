@@ -18,5 +18,3 @@ Refer to docs for setup and build instructions
 3. [run](docs/3_run.md)<br>
 <br>
 <br>
-
-![alt text](docs/images/Starfield_001.gif "Starfield")
