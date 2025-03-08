@@ -19,6 +19,7 @@
                 "bsdsocket_emu=true",
               
             ],
+            "noDebug": true //stop winuae timeout
             //"preLaunchTask": "Build"
         }
     ]
