@@ -36,9 +36,9 @@ VS Code plugins
 
 Next, install these extensions in VS Code.   Press Ctrl Shift X to access Extensions in VS Code.
 
-![alt text](images/CMake.jpg "CMake")
+![alt text](images/cmake.jpg "CMake")
 
-![alt text](images/CMakeTools.jpg "CMakeTools")
+![alt text](images/cmakeTools.jpg "CMakeTools")
 
 
 That should be all that's required to start building, clone the workspace if haven't already:
