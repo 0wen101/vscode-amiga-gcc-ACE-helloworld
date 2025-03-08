@@ -8,25 +8,27 @@ Building the code
 
 
 
-As the examples depend on the ACE engine, it's necessary to build the ACE engine itself first. The engine will only need to be built once.
+As the examples require the ACE engine, we need to add that as dependacy to our project. The engine will only need to be built once.
 
 **ACE & Git Submodule**
 <br>You can build and setup ACE as either a git Submodule or as a c static library (libace.a) to link to your own code when compiling.<br>
-Submodule is the recommended approach so will use that.
-
-
-In Git bash, make a 'deps' (dependancies) sub folder in your workspace folder like so:
+Submodule is the recommended approach so will use that.<br>The project is already configured with ACE as a Git submodule (see file '.gitmodules') - it just needs to be updated.<br>
+If not there already, make a 'deps/ace' sub folder in your workspace folder like so (Git Bash for example):
 
 ```
 cd /c/Git/vscode-amiga-gcc-ACE-helloworld
 mkdir deps
+cd deps
+mkdir ace
 ```
-Then add the git Submodule with these git commands:
+Then update with the correct version of ACE (main is the current branch, be sure your local branch is on that) : 
 ```
-git submodule add https://github.com/AmigaPorts/ACE deps/ace
+cd /c/Git/vscode-amiga-gcc-ACE-helloworld
 git submodule update --init --recursive
+cd deps/ace
+git checkout main
 ```
-This will add the ace repo to the deps/ace sub folder.
+This will add the correct ACE repo we need to the deps/ace sub folder.
 
 build in terminal
 ---
@@ -84,10 +86,9 @@ Enable it with the build flag 'ACE_DEBUG=ON' when creating the Makefile with CMa
 build with VS code
 --
 
-To build ACE via VS Code commands instead of command line some further configuration is required.
-<br>First is to create a new empty 'build' folder in your workspace.
-<br>Next is to configure CMake 'kits' to let the CMake VS Code plugin know about the compilers installed on your system.
-<br>To do that (assuming you have installed the required VS Code plugins), press Ctrl Shift P, the select the command '**CMake Edit User-Local CMake Kits**' to open cmake-tools-kits.json.
+To build ACE via VS Code commands instead of command line some further configuration is required.<br>
+1. Create a new empty 'build' folder in your workspace.
+2. Next is to configure CMake 'kits' to let the CMake VS Code plugin know about the compilers installed on your system.<br>To do that (assuming you have installed the required VS Code plugins), press Ctrl Shift P, the select the command '**CMake Edit User-Local CMake Kits**' to open cmake-tools-kits.json.
 <br>
 Paste this in (from old drive) so the file looks like this (change paths if needed):
 ```
@@ -119,7 +120,7 @@ Paste this in (from old drive) so the file looks like this (change paths if need
 ```
 Restart vs code to pick up the kit changes.
 
-Pres Ctrl Shift P again and select CMake: 'Select a kit'
+3. Pres Ctrl Shift P again and select CMake: 'Select a kit'
 
 ![alt text](images/vscode-f7-kit-selection.jpg "select a kit")
 
@@ -134,7 +135,7 @@ If having issues, it's worth rechecking the compiler location has been correctly
 Save and re-open VS Code. Press Ctrl Shift P again and select **CMAKE: Configure**. 
 <br>This should re-create the Makefile again. There should be no errors reported.
 
-When the Makefile is generating correctly, press **F7** to start building the actual Amiga executable (aswell as ACE itself if it hasnt been built already)
+4. When the Makefile is generating correctly, press **F7** to start building the actual Amiga executable (aswell as ACE itself if it hasnt been built already)
 <br>You may be presented with the kit selection again, if so, select the Amiga GCC compiler if requested.
 
 ![alt text](images/vscode-build-hello.jpg "building")
