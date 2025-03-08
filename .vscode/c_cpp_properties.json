@@ -3,7 +3,8 @@
         {
             "name": "Amiga",
             "includePath": [
-                "c:/amiga-gcc/**"
+                "c:/amiga-gcc/**",
+                "${workspaceFolder}/deps/ace/include/**"
             ],
             "defines": [
                 "_NO_INLINE"
