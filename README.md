@@ -16,3 +16,5 @@ Refer to docs for setup and build instructions
 1. [install and setup](docs/1_install_and_setup.md)<br>
 2. [build](docs/2_build.md)<br>
 3. [run](docs/3_run.md)
+
+The ACE [Starfield](https://github.com/0wen101/AmigaStarfield-ozzyb) example, which is a bit more interesting, uses the same setup.
