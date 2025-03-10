@@ -91,6 +91,7 @@ To build ACE via VS Code commands instead of command line some further configura
 2. Next is to configure CMake 'kits' to let the CMake VS Code plugin know about the compilers installed on your system.<br>To do that (assuming you have installed the required VS Code plugins), press Ctrl Shift P, the select the command '**CMake Edit User-Local CMake Kits**' to open cmake-tools-kits.json.
 <br>
 Paste this in (from old drive) so the file looks like this (change paths if needed):
+
 ```
 [
   {
@@ -118,6 +119,7 @@ Paste this in (from old drive) so the file looks like this (change paths if need
   }
 ]
 ```
+
 Restart vs code to pick up the kit changes.
 
 3. Pres Ctrl Shift P again and select CMake: 'Select a kit'
