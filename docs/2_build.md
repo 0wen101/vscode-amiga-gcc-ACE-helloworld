@@ -8,7 +8,7 @@ Building the code
 
 
 
-As the examples require the ACE engine, we need to add that as dependacy to our project. The engine will only need to be built once.
+As the examples require the ACE engine, you need to add that as dependacy to our project. The engine will only need to be built once.
 
 **ACE & Git Submodule**
 <br>You can build and setup ACE as either a git Submodule or as a c static library (libace.a) to link to your own code when compiling.<br>
@@ -28,11 +28,11 @@ git submodule update --init --recursive
 cd deps/ace
 git checkout main
 ```
-This will add the correct ACE repo we need to the deps/ace sub folder.
+This will add the correct ACE branch we need to the deps/ace sub folder.
 
 build in terminal
 ---
-Before we look at how build ACE stuff in VS Code with a key press, it's useful to look at the command line first to see whats going on and get a bit more detail with understanding.
+Before we look at how to build ACE stuff in VS Code (with a key press), it's useful to look at the command line first to see what's going on.
 
 With the workspace open in VS Code, open a new Terminal window and type this to create a makefile:
 ```
@@ -49,8 +49,8 @@ you should see this output:
 
 ![alt text](images/terminal-ace-build.jpg "VS Code Terminal output")
 
-That creates Bebbos GCC compatible Makefiles.<br> At least two makesfiles are created - one for the sub module. And another for the hello world Amiga exe.
-<br>The next step is to compile the Amiga exe using that same Makefile.<br>
+That creates Bebbos GCC compatible Makefiles.<br> At least two makesfiles are created - one for the Submodule, another for the helloworld Amiga exe.
+<br>The next step is to compile the code and create an Amiga exe using the generated Makefile.<br>
 To do that use this command (dont forget the '.' character after --build) :
 
 ```
@@ -69,7 +69,7 @@ A common error when building is a message regarding missing MinGW in your Window
 CMake Error: CMake was unable to find a build program corresponding to "MinGW Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
 -- Configuring incomplete, errors occurred!
 ```
-This probably indicates MinGW is either not installed or not on your windows path. See previous page on how to edit the path VS Code uses.
+This probably indicates MinGW is either not installed or not on your windows path. See previous [page](docs/1_install_and_setup.md) on how to edit the path VS Code uses.
 
 Later we can get VS Code to automatically run the built exe by pressing F5, but for now test the exe by manually copying it to your Amiga or WinUAE and running it. 
 <br>The hello executable produces a 'game.log' file containing the text 'Hello, Amiga!'
@@ -86,11 +86,11 @@ Enable it with the build flag 'ACE_DEBUG=ON' when creating the Makefile with CMa
 build with VS code
 --
 
-To build ACE via VS Code commands instead of command line some further configuration is required.<br>
+To build ACE via VS Code commands instead of command line typing some further configuration is required.<br>
 1. Create a new empty 'build' folder in your workspace.
 2. Next is to configure CMake 'kits' to let the CMake VS Code plugin know about the compilers installed on your system.<br>To do that (assuming you have installed the required VS Code plugins), press Ctrl Shift P, the select the command '**CMake Edit User-Local CMake Kits**' to open cmake-tools-kits.json.
 <br>
-Paste this in (from old drive) so the file looks like this (change paths if needed):
+Paste this in so the file looks like this (change paths if needed):
 
 ```
 [
