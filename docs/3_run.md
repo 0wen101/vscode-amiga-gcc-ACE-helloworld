@@ -4,7 +4,7 @@ Run the code
 ----
 
 Press **F5**, or, if you like, go to the Run & Debug window and press the play icon.
-<br>This will start WinUAE. <br>The startup-sequence on the Amiga configuration is set to run our hello exe at startup (creates a game.log file in the same folder which contains the actual hello message).
+<br>This will start WinUAE. <br>The startup-sequence on the Amiga configuration is set to run our built hello exe at startup (creates a game.log file in the same folder which contains the actual hello message).
 
 ![alt text](images/vscode-game.log.jpg "game.log file")
 
