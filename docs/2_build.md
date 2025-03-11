@@ -69,7 +69,7 @@ A common error when building is a message regarding missing MinGW in your Window
 CMake Error: CMake was unable to find a build program corresponding to "MinGW Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
 -- Configuring incomplete, errors occurred!
 ```
-This probably indicates MinGW is either not installed or not on your windows path. See previous [page](docs/1_install_and_setup.md) on how to edit the path VS Code uses.
+This probably indicates MinGW is either not installed or not on your windows path. See previous [page](/docs/1_install_and_setup.md) on how to edit the path VS Code uses.
 
 Later we can get VS Code to automatically run the built exe by pressing F5, but for now test the exe by manually copying it to your Amiga or WinUAE and running it. 
 <br>The hello executable produces a 'game.log' file containing the text 'Hello, Amiga!'
